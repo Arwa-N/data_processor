@@ -5,10 +5,6 @@ FROM python:3.7.9-alpine3.12
 
 WORKDIR /app
 
-COPY server.py ./
 COPY data_processor.py ./
-COPY run.sh ./
 
-RUN chmod +x /app/run.sh
-
-CMD ["/app/run.sh"]
+CMD ["python3", "data_processor.py"]
